@@ -216,3 +216,22 @@ matrix_tcr = {'elemento_b' : [1,2,3,4],
          'elemento_m' : [2,3,5,11]}
 valor, modulo = teorema_chino_del_residuo(matrix_tcr)
 print "\nResultado usando Teorema chino del residuo:\n %d mod %d" % (valor, modulo)
+
+# https://primes.utm.edu/lists/small/small3.html
+longPrime = 203956878356401977405765866929034577280193993314348263094772646453283062722701277632936616063144088173312372882677123879538709400158306567338328279154499698366071906766440037074217117805690872792848149112022286332144876183376326512083574821647933992961249917319836219304274280243803104015000563790123
+print longPrime*2
+
+p = 11
+g = 8
+s= 6
+k = 8
+K= g**k % p
+sigma = s+k*K % (p-1)
+print K, sigma
+
+aa = -g**sigma
+bb = -K**k
+inverso, k_multiplica_modulo, gcd = bezout(aa,p)
+print "inverso modular: %d,\nentero k que multiplica al modulo: %d \ngcd: %d" % (inverso, k_multiplica_modulo, gcd)
+v = inverso*bb % p
+print "v: %d" % v

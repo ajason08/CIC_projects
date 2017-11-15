@@ -12,7 +12,6 @@ def show_graphs(list_of_graphs, with_labels=True):
         i += 1
     plt.show()
 # Create graph
-from sympy.core.trace import Tr
 
 '''
 g = nx.Graph()

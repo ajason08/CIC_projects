@@ -226,12 +226,15 @@ g = 8
 s= 6
 k = 8
 K= g**k % p
-sigma = s+k*K % (p-1)
-print K, sigma
+delta = s+k*K % (p-1)
+print K, delta
 
-aa = -g**sigma
+aa = -g**delta
 bb = -K**k
 inverso, k_multiplica_modulo, gcd = bezout(aa,p)
 print "inverso modular: %d,\nentero k que multiplica al modulo: %d \ngcd: %d" % (inverso, k_multiplica_modulo, gcd)
 v = inverso*bb % p
 print "v: %d" % v
+
+for i in range (10):
+    print 2**i % 11

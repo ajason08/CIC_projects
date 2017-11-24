@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tarea</title>
+ 
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+ 	<script src="js/jquery-3.2.1.min.js"></script>
+ 	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+ 	<script src="js/InitElements.js"></script>
+ 	<script src="js/Operacion.js"></script>
+ 	<script src="js/SelectAllText.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+  </head>
+  <body>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-success">
+				<div class="panel-heading">Tarea análisis de la frecuencia de las palabras</div>
+				<div class="panel-body">
+					<div class="row">
+				  		<div class="col-sm-12">
+				  			<p>Introduce las palabras que serán escaneadas, separalas por comas:</p>
+				  		</div>
+					</div>
+					<div class="row">
+				  		<div class="col-sm-12">
+				  			<textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+				  		</div>
+					</div>
+					<div class="row">
+				  		<div class="col-sm-12">
+				  			<label for="exampleInputFile">Archivos a escanear:</label>
+						    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" webkitdirectory allowdirs directory >
+						    <small id="fileHelp" class="form-text text-muted">Selecciona el folder donde se encuentran los archivos a escanear</small>
+				  		</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<pre></pre>
+		<div class="Grafica" id="divGrafica">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-success">
+						<div class="panel-heading">Frecuencia</div>
+						<div class="panel-body">
+							<div class="row">
+						  		<div class="col-sm-12">
+						  			<canvas id="canvas" height="450" width="600"></canvas>
+						  		</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </body>
+</html>

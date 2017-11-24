@@ -12,7 +12,7 @@ def binomialFDP(p,n,x):
     p2 = float((1-p)**(n-x))
     prob = comb*p1*p2
     return prob
-
+'''
 # esperanza de una hipergeometrica
 w= 0
 r = 4
@@ -23,19 +23,14 @@ for i in range(4):
 print w
 print (combinatoria(4,1)*combinatoria(6,2))/combinatoria(10,3)
 exit()
-
+'''
 
 
 w = 0
-for i in range(21):
+N= 30
+p= float(1)/6
+for r in range(4):
     #print binomialFDP(0.2, 25, i)
-    w += binomialFDP(0.2, 25, i)
+    w += binomialFDP(p, N, r)
     print w
 print w
-
-
-
-w = 0
-for i in range(21,26):
-    w += binomialFDP(0.2, 25, i)
-print 1-w

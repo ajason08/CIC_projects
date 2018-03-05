@@ -1,0 +1,7 @@
+Python type PNEANet: Directed
+  Nodes:                    7115
+  Edges:                    103689
+  Zero Deg Nodes:           0
+  Zero InDeg Nodes:         4734
+  Zero OutDeg Nodes:        1005
+  NonZero In-Out Deg Nodes: 1376

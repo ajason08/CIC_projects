@@ -1,3 +1,4 @@
+import keras;
 from keras.preprocessing import sequence
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
@@ -5,10 +6,12 @@ from keras.layers import Embedding
 from keras.layers import Conv1D, GlobalMaxPooling1D
 from keras.datasets import imdb
 
+print(keras.__version__)
+exit()
 # set parameters:
 max_features = 5000
 maxlen = 400
-batch_size = 2
+batch_size = 32
 embedding_dims = 50
 filters = 250
 kernel_size = 3
@@ -20,7 +23,7 @@ print('Loading data...')
 print(x_train[:2])
 print(y_train[:2])
 
-#exit()
+
 print(len(x_train), 'train sequences')
 print(len(x_test), 'test sequences')
 

@@ -1,0 +1,158 @@
+C:\projects\homework\salient_ngrams_extractor>C:\Anaconda3\python.exe main.py
+
+FIRST PART: Read file, extract n-grams (from unigrams to trigrams) and save them in a dictionary variable of an object
+
+demo: dictionary of n-grams frequencies
+The 6149
+Project 205
+Gutenberg 78
+EBook 5
+of 39169
+Adventures 2
+Sherlock 95
+Holmes 198
+The Project 13
+Project Gutenberg 74
+Gutenberg EBook 5
+...
+A total of 1386757 different n-grams where found.
+
+----------------------------------------------------------------------
+SECOND PART: extract n-grams (bigrams and trigrams) based on pmi score
+
+demo: bigrams and trigrams pmi_scores
+                     ngram  pmi_score
+1496  Project Gutenberg-tm  12.412818
+2792   [Illustration: FIG.  11.980397
+1504              New York  11.195880
+815          United States  11.008437
+3748         Princess Mary  10.598099
+4238        Princess Mary,  10.484811
+7                   OF THE  10.212413
+2916           vessel wall  10.181655
+2740           takes place  10.133388
+36                "My dear  10.047668
+2932         lymph vessels  10.020624
+347            Mr. Holmes,  10.007705
+2884          lymph glands   9.943219
+4925      presented itself   9.879802
+3766         drawing room,   9.861783
+3051            soft parts   9.849331
+2946    treatment consists   9.825658
+3760         drawing room.   9.823951
+1737           paper money   9.784738
+2901          takes place,   9.781307
+2958          cold abscess   9.766711
+1110         several times   9.762912
+3203      observed chiefly   9.750122
+1993  federal Constitution   9.665227
+2803           giving rise   9.646646
+1515               AND THE   9.633758
+7018         Countess Mary   9.592795
+2817             give rise   9.573907
+749            anyone else   9.567365
+1544           New England   9.520427
+...                    ...        ...
+2458            having got   5.004524
+3906          Anatole kept   5.004379
+6116             away. And   5.003772
+413           some strange   5.003687
+7256            girl known   5.003634
+1276            few things   5.003455
+2464       call themselves   5.003427
+2326         under federal   5.003261
+4858        going straight   5.003261
+916               call for   5.002746
+4269        young Nicholas   5.002682
+3717           disease of,   5.002682
+1578          _The English   5.002641
+3479             _The deep   5.002641
+235          another. "But   5.002599
+3063            great pain   5.002585
+6545            Moscow nor   5.002241
+6479             go again,   5.002186
+5584             half past   5.002144
+2655       foreign country   5.002144
+1655             hand. For   5.001813
+2058           For members   5.001813
+2349           South that,   5.001152
+1160                due to   5.001109
+1236       appeared before   5.000929
+5285          himself. "It   5.000780
+7081             said. "It   5.000780
+7218          means growth   5.000615
+5092             pass here   5.000532
+2986          part pressed   5.000202
+
+[7377 rows x 2 columns]
+-----------------------------------------------
+                               ngram  pmi_score
+38366      full Project Gutenberg-tm  21.162340
+53080              joint lesions in,  20.709259
+48555        considerable size (Fig.  19.990678
+128968      Nicholas, Countess Mary,  19.984849
+38480                          | | |  19.953637
+16739                 My friend rose  19.888008
+72314          easily attack instead  19.820999
+38383      Project Gutenberg-tm work  19.781995
+40666           making firm pressure  19.731989
+124349           away, twenty voices  19.726658
+47820        vessels slowly increase  19.712354
+41792           dead portion produce  19.705022
+103213                 An hour later  19.689811
+44870           slowly growing forms  19.651142
+38520            showing changes due  19.598977
+13661             door. My attention  19.531020
+71238      question presented itself  19.525819
+69226     immediately smiling again,  19.520824
+132318              hard terms doubt  19.517080
+68780            low opinion changed  19.508013
+52038          takes place, although  19.503273
+48070         change which, although  19.502516
+43634      secondary lesions similar  19.478030
+11566                   so. Now turn  19.477855
+123131       running away, described  19.450603
+48071       which, although attended  19.445031
+82969     French, immediately seized  19.442125
+104029       repeated again, smiling  19.432166
+38362   Gutenberg-tm name associated  19.423340
+132362           slowly tears horses  19.419242
+...                              ...        ...
+127527                 taking up the   5.002450
+54087                   father to be   5.002391
+96825              expected from the   5.002360
+31211              officers from the   5.002360
+108162               from the right,   5.002360
+115576             Russians from the   5.002360
+56231                   out from her   5.002324
+73301                  other who was   5.002264
+52208                     in a joint   5.001997
+50567                   is acute and   5.001804
+6928                which marked the   5.001777
+79951                on which Prince   5.001752
+49892                   tissue of an   5.001707
+61143                 the two people   5.001696
+2450                    I thought he   5.001601
+126414                    wish it to   5.001553
+66592                and answered at   5.001369
+53761                        up as a   5.001099
+117479            especially that he   5.000877
+118533                came to Prince   5.000771
+17142                    he was soon   5.000585
+88410                   and then, on   5.000548
+48098             when the condition   5.000436
+47524             the condition when   5.000436
+30739                   all the free   5.000411
+35713                into the states   5.000367
+5701                     had an only   5.000364
+47459                   or even with   5.000308
+53284                the question he   5.000106
+62764               the regiment but   5.000062
+
+[132370 rows x 2 columns]
+
+----------------------------------------------------------------------
+Analysis:
+- A min_ocurrence_threshold = 100 seems to work pretty well for extract collocation of bigrams.
+- However at extracting collocation of trigrams a min_ocurrence_threshold = 360 leads to better results.
+- Posterior data cleaning like (case converter, remove punctuation, POS filtering, etc) should improve results for collocation and keywords identification.
